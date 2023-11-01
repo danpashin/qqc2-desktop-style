@@ -1,7 +1,7 @@
 # Maintainer: Antonio Rojas <arojas@archlinux.org>
 
 pkgname=qqc2-desktop-style
-pkgver=5.240.0.20231027
+pkgver=5.240.0.20231101
 pkgrel=1
 pkgdesc='A style for Qt Quick Controls 2 to make it follow your desktop theme'
 arch=(x86_64)
