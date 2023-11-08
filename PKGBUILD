@@ -1,7 +1,7 @@
 # Maintainer: Antonio Rojas <arojas@archlinux.org>
 
 pkgname=qqc2-desktop-style
-pkgver=5.240.0.20231105
+pkgver=5.245.0
 pkgrel=1
 pkgdesc='A style for Qt Quick Controls 2 to make it follow your desktop theme'
 arch=(x86_64)
@@ -18,15 +18,14 @@ depends=(gcc-libs
          sonnet)
 makedepends=(extra-cmake-modules)
 groups=(kf6)
-#source=(https://download.kde.org/stable/frameworks/${pkgver%.*}/$pkgname-$pkgver.tar.xz{,.sig})
-makedepends+=(git)
-_commit=40028e318f3e4d56040d93e299e6b522e4fede72
-source=(git+https://invent.kde.org/frameworks/$pkgname#commit=$_commit)
-sha256sums=('SKIP')
-validpgpkeys=('53E6B47B45CEA3E0D5B7457758D0EE648A48B3BB') # David Faure <faure@kde.org>
+source=(https://download.kde.org/unstable/frameworks/$pkgver/$pkgname-$pkgver.tar.xz{,.sig})
+sha256sums=('39d953fc3e5d1317f30d87ee3d4d14f184693ad2aba3de6c9dd9d4723c991501'
+            'SKIP')
+validpgpkeys=(53E6B47B45CEA3E0D5B7457758D0EE648A48B3BB  # David Faure <faure@kde.org>
+              E0A3EB202F8E57528E13E72FD7574483BB57B18D) # Jonathan Esk-Riddell <jr@jriddell.org>
 
 build() {
-  cmake -B build -S $pkgname \
+  cmake -B build -S $pkgname-$pkgver \
     -DBUILD_TESTING=OFF
   cmake --build build
 }
