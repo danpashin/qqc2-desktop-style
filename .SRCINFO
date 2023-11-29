@@ -1,6 +1,6 @@
 pkgbase = qqc2-desktop-style
 	pkgdesc = A style for Qt Quick Controls 2 to make it follow your desktop theme
-	pkgver = 5.245.0
+	pkgver = 5.246.0
 	pkgrel = 1
 	url = https://community.kde.org/Frameworks
 	arch = x86_64
@@ -16,11 +16,11 @@ pkgbase = qqc2-desktop-style
 	depends = qt6-base
 	depends = qt6-declarative
 	depends = sonnet
-	source = https://download.kde.org/unstable/frameworks/5.245.0/qqc2-desktop-style-5.245.0.tar.xz
-	source = https://download.kde.org/unstable/frameworks/5.245.0/qqc2-desktop-style-5.245.0.tar.xz.sig
+	source = https://download.kde.org/unstable/frameworks/5.246.0/qqc2-desktop-style-5.246.0.tar.xz
+	source = https://download.kde.org/unstable/frameworks/5.246.0/qqc2-desktop-style-5.246.0.tar.xz.sig
 	validpgpkeys = 53E6B47B45CEA3E0D5B7457758D0EE648A48B3BB
 	validpgpkeys = E0A3EB202F8E57528E13E72FD7574483BB57B18D
-	sha256sums = 39d953fc3e5d1317f30d87ee3d4d14f184693ad2aba3de6c9dd9d4723c991501
+	sha256sums = f77c86bad4963546ef82d4bbab4ab37dd6d8f119ba85e77e53b51bc28b55e7ca
 	sha256sums = SKIP
 
 pkgname = qqc2-desktop-style
