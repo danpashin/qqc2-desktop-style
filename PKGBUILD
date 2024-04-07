@@ -16,7 +16,8 @@ depends=(gcc-libs
          qt6-base
          qt6-declarative
          sonnet)
-makedepends=(extra-cmake-modules)
+makedepends=(extra-cmake-modules
+             qt6-tools)
 groups=(kf6)
 source=(https://download.kde.org/stable/frameworks/${pkgver%.*}/$pkgname-$pkgver.tar.xz{,.sig})
 sha256sums=('e91d9abcf9169eca357e7dc8b7fc504a3b7e5eff324feaa6ffecc8091e1622d9'
