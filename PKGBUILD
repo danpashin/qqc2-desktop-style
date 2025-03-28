@@ -17,15 +17,25 @@ depends=(gcc-libs
          qt6-declarative
          sonnet)
 makedepends=(extra-cmake-modules
-             qt6-tools)
+             qt6-tools
+             git)
 groups=(kf6)
-source=(https://download.kde.org/stable/frameworks/${pkgver%.*}/$pkgname-$pkgver.tar.xz{,.sig})
+source=(
+  https://download.kde.org/stable/frameworks/${pkgver%.*}/$pkgname-$pkgver.tar.xz{,.sig}
+  force-native-font-rendering.patch
+  )
 sha256sums=('a8a5a8ce343ea77cb1d0b300c12e86829c913e036c6ff8ad5d21b8f96218426a'
-            'SKIP')
+            'SKIP'
+            '68f633c138f33dcaa422a2d566d7b64e446d1ad049cb31345c7c6db1c88960c2')
 validpgpkeys=(53E6B47B45CEA3E0D5B7457758D0EE648A48B3BB # David Faure <faure@kde.org>
               E0A3EB202F8E57528E13E72FD7574483BB57B18D # Jonathan Esk-Riddell <jr@jriddell.org>
               90A968ACA84537CC27B99EAF2C8DF587A6D4AAC1 # Nicolas Fella <nicolas.fella@kde.org>
               )
+
+prepare() {
+    cd "$srcdir/$pkgname-$pkgver"
+    patch -p1 < "$srcdir/force-native-font-rendering.patch"
+}
 
 build() {
   cmake -B build -S $pkgname-$pkgver \
